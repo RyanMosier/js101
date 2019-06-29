@@ -61,7 +61,7 @@ function useLength () {
 
 function usePush () {
   let arr = ['a', 'b', 'c']
-  (usePush.push('d'));
+  arr.push ('d');
   return arr;
 
 
@@ -73,6 +73,8 @@ function usePush () {
 
 function usePop () {
   let arr = ['a', 'b', 'c']
+  arr.pop ('c')
+  return arr;
 
 }
 
@@ -91,6 +93,8 @@ function useIndexOf () {
   console.assert(arr.indexOf('Z') === -1) // no "Z" in this array
 
   // return the index of the first instance of "T" here
+ return arr.indexOf('T')
+
 
 }
 
@@ -107,6 +111,7 @@ function useJoin () {
   console.assert(arr.join('') === 'abcdef') // pass an empty string to have no separator
 
   // create and return the string 'a-b-c-d-e-f' here
+return arr.join('-')
 
 }
 
